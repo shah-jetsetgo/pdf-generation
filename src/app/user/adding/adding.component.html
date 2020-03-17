@@ -1,0 +1,61 @@
+
+
+
+<button type="button" mdbBtn color="primary" class="relative waves-light" (click)="basicModal.show()" mdbWavesEffect> Launch demo modal</button >
+  <div mdbModal #basicModal="mdbModal" class="modal fade right" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+     aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+                      <span aria-hidden="true">×</span>
+                  </button>
+                  <h4 class="modal-title w-100" id="myModalLabel">ADD FISH</h4>
+              </div>
+              <div class="modal-body">
+                <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  
+                  <label>
+                    First Name:
+                    <input type="text" formControlName="firstName">
+                  </label>
+                
+                  <label>
+                    Last Name:
+                    <input type="text" formControlName="lastName">
+                  </label>
+                  <label>
+                    Handle:
+                    <input type="text" formControlName="handle">
+                  </label>
+                 
+                   <div class="custom-control custom-switch" >
+                   
+                   <input type="checkbox" class="custom-control-input" formControlName="collapsed" id="customSwitches">
+                   <label class="custom-control-label" for="customSwitches">Toggle this switch element</label>
+                 </div>
+                  <div formGroupName="orderFrom">
+                  <label>
+                    Order ID:
+                    <input type="text" formControlName="orderid">
+                  </label>
+                  <label>
+                    Order Date:
+                    <input type="text" formControlName="orderdate">
+                  </label>
+                  <label>
+                    Address:
+                    <input type="text" formControlName="address">
+                  </label>
+                  </div>
+                  <br>
+                  <button type="submit" >Submit</button>
+                </form>
+              </div>
+              <div class="modal-footer justify-content-center">
+                  <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Close</button>
+                  <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>OK!</button>
+              </div>
+          </div>
+      </div >
+  </div >

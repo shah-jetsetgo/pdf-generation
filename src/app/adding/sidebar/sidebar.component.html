@@ -1,0 +1,78 @@
+
+<div class="sidebar">
+  <div class="pt-2 text-center">
+    <h5>JETSETGO &nbsp;&nbsp;&nbsp;<mdb-icon fas icon="times"></mdb-icon></h5>
+  </div>
+  <hr>
+  <div class="d-flex flex-row">
+    <div> <mdb-icon fas icon="user-tie fa-5x"></mdb-icon></div>
+   <div class="pl-1  justify-content-end"><h4>Rahul Shah</h4>
+    <small>
+      front-end<br>
+    Online
+    </small> </div>
+    
+  </div>
+ 
+  <hr>
+  <div class="m-3">
+    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+  </div>
+  <hr>
+
+  <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed"
+  [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
+  <i class="fas fa-tachometer-alt fa-2x float-left "></i>Toggle collapse
+</button>
+
+<div id="collapseBasic" [collapse]="isCollapsed">
+<div class="well well-lg card card-block card-header">Some content</div>
+</div>
+<button type="button" class="btn btn-primary" (click)="isCollapsed1 = !isCollapsed1"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
+        <i class="fas fa-shopping-cart fa-2x float-left"></i>Toggle collapse
+</button>
+
+<div id="collapseBasic" [collapse]="isCollapsed1">
+  <div class="well well-lg card card-block card-header">Some content</div>
+</div>
+<button type="button" class="btn btn-primary" (click)="isCollapsed2 = !isCollapsed2"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
+        <i class="fas fa-gem fa-2x float-left"></i>Toggle collapse
+</button>
+
+<div id="collapseBasic" [collapse]="isCollapsed2">
+  <div class="well well-lg card card-block card-header">Some content</div>
+</div>
+<button type="button" class="btn btn-primary" (click)="isCollapsed3 = !isCollapsed3"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"><i class="fas fa-chart-line fa-2x float-left"></i>Toggle collapse
+</button>
+
+<div id="collapseBasic" [collapse]="isCollapsed3">
+  <div class="well well-lg card card-block card-header">Some content</div>
+</div>
+<button type="button" class="btn btn-primary" (click)="isCollapsed4 = !isCollapsed4"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"><i class="fas fa-globe fa-2x float-left "></i>Toggle collapse
+</button>
+
+<div id="collapseBasic" [collapse]="isCollapsed4">
+  <div class="well well-lg card card-block card-header">Some content</div>
+  </div>
+  
+<div class="px-3">
+<h3>Exter</h3>
+</div>
+
+<div class=" colors text-center p-2 m-1">
+ 
+ <h5 > <i class="fas fa-file-alt float-left"></i>Documentation</h5> 
+</div>
+<div class=" colors text-center p-2 m-1">
+  <h5><i class="fas fa-calendar float-left"></i>Calender</h5>
+</div>
+<div class="colors text-center p-2 m-1">
+  <h5> <i class="fas fa-folder float-left"></i>Examples</h5>
+</div>
+
+</div>
+

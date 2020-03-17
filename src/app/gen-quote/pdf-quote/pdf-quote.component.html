@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-2">
+      <button type="button"  (click)="submitForm()" class="btn btn-primary">Quote-form</button>
+    </div>
+    <div class="col-2">
+      <button type="button"  (click)="submitRecords()" class="btn btn-primary">Records</button>
+    </div>
+    <div class="col-2">
+      <button type="button"  (click)="Downloadpdf()" class="btn btn-primary">Export-PDF</button>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" id="exportpdf" >
+ <table>
+  <thead>
+   <tr class="text-center" >
+      <th class="img-fluid">
+        <img src="https://d3tfanr7troppj.cloudfront.net/static_files/images/000/003/173/original/mailetr_strip.jpg?1582868838" >
+       </th>
+    </tr>
+  </thead>
+  
+ </table>
+  <div>
+    <P>Dear &nbsp;{{formdata.firstName | uppercase}} &nbsp;{{formdata.lastName | uppercase}} Sir, 
+
+      <br>
+      We are pleased to offer you the King Air {{formdata.airName}}. The commercials for the same will be as follows:
+    </P>
+  </div>
+  <div >
+  <table class="table table-bordered my-5">
+    <thead>
+      <tr class="text-center"><th colspan="6">{{formdata.airName}}</th></tr>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of formdata.address ">
+       <td>{{el.addDate | date:'shortDate'}}</td>
+        <td>{{el.depat}}</td>
+        <td>{{el.arrival}}</td>
+        <td>{{el.etd?"ETD":"Not-ETD"}}</td>
+        <td>{{el.timetraval}}</td>
+        <td>{{el.remarks}}</td>
+      </tr>
+      <tr >
+        <th class="text-center" colspan="4">TOTAL HRS.</th>
+       <th> {{ getTotalCost() }} </th>
+       <th></th>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered container-fluid" >
+    <thead>
+      <tr class="text-center"> <th colspan="4">ESTIMATED CHARTER COST  
+        \</th></tr>
+     <tr>
+     <th *ngFor="let charge of headcharge" scope="col">{{charge}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let cha of formdata.charges ; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{cha.chargetype}}</td> 
+        <td>{{cha.amount}}</td>
+        <td>{{cha.amount}}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Note: Parking at Jodhpur in subject to availability</td> 
+        <td></td>
+        <td></td> </tr>
+      
+      <tr> <th colspan="4"></th>
+      </tr>
+      <tr class="text-center"> 
+        <th colspan="3">Total</th>
+        <th></th>
+      </tr>
+      <tr class="text-center"> 
+        <th colspan="3">Service Tax@ 15%</th>
+        <th></th>
+      </tr>
+      <tr class="text-center"> 
+        <th colspan="3">Grand Total</th>
+        <th></th>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+
+

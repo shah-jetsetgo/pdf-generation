@@ -1,0 +1,27 @@
+.sidebar{
+    background-color: #31353D;
+    width: 230px;
+    color: white;
+    float: left;
+  
+    width:250px;
+   overflow-y: scroll;
+   margin-bottom: 25px;
+}
+.sidebar hr{
+    color: white!important;
+}
+button{
+    width: 220px;
+    margin: 5px;
+}
+.sidebar .colors{
+    background-color: dimgrey;
+
+}
+
+.sidebar button:hover i {
+    color: gold;
+    float: none !important;
+   
+}
